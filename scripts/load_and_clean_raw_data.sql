@@ -113,7 +113,7 @@ DROP TABLE IF EXISTS raw_placements;
 
 -- Create final table
 
-CREATE TABLE IF NOT EXISTS stats (
+CREATE TABLE IF NOT EXISTS campaign_stats (
 	placement_id INT(11),
 	`date` DATE,
 	funnel VARCHAR(255),
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS stats (
 	bounces INT(11)
 );
 
-INSERT INTO stats (placement_id, `date`, funnel, format, size, campaign_name, impressions, clicks, spend, sessions, bounces)
+INSERT INTO campaign_stats (placement_id, `date`, funnel, format, size, campaign_name, impressions, clicks, spend, sessions, bounces)
 SELECT 
 	g.placement_id,
 	g.date,
