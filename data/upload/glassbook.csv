@@ -1,0 +1,6 @@
+date,campaign_id,adset_id,ad_id,web_tracking,impressions,clicks,spend
+2025-06-14,2.38504E+16,2.38504E+16,2.38515E+16,https://glassrsoom.test/abc/cde/543604422;400000000;l,50,0,0.58
+2025-06-17,2.38504E+16,2.38504E+16,2.38515E+16,https://glassrsoom.test/abc/cde/543604422;400000000;l,100,1,5.5
+2025-06-20,2.38504E+16,2.38504E+16,2.38515E+16,https://glassrsoom.test/abc/cde/543604422;400000000;l,100,2,2.1
+2025-06-23,2.38504E+16,2.38504E+16,2.38515E+16,https://glassrsoom.test/abc/cde/543604422;400000000;l,400,3,4.54
+2025-06-27,2.38504E+16,2.38504E+16,2.38515E+16,https://glassrsoom.test/abc/cde/543604422;400000000;l,10,4,12.65
