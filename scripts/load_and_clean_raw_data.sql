@@ -111,3 +111,35 @@ DROP TABLE IF EXISTS raw_google_analytics;
 DROP TABLE IF EXISTS raw_placements;
 
 
+-- Create final table
+
+CREATE TABLE IF NOT EXISTS stats (
+	placement_id INT(11),
+	`date` DATE,
+	funnel VARCHAR(255),
+	format VARCHAR(255),
+	size VARCHAR(255),
+	campaign_name VARCHAR(255),
+	impressions INT(11),
+	clicks INT(11),
+	spend DECIMAL(10,2),
+	sessions INT(11),
+	bounces INT(11)
+);
+
+INSERT INTO stats (placement_id, `date`, funnel, format, size, campaign_name, impressions, clicks, spend, sessions, bounces)
+SELECT 
+	g.placement_id,
+	g.date,
+	p.funnel,
+	p.format,
+	p.size,
+	p.campaign_name,
+	g.impressions,
+	g.clicks,
+	g.spend,
+	ga.sessions,
+	ga.bounces
+FROM glassbook g
+JOIN google_analytics ga ON (g.placement_id = ga.placement_id AND g.date = ga.date)
+JOIN placements p ON g.placement_id = p.placement_id;
