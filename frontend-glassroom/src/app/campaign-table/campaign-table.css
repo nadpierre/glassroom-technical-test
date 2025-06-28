@@ -1,0 +1,29 @@
+/* Transitions and spacing improvements */
+table td, table th {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  margin-bottom: 20px;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0069d9 !important;
+}
+
+/* Slight rounding for inputs and selects */
+input.form-control, select.form-select {
+  border-radius: 0.375rem;
+}
+
+/* Sticky table header visual consistency */
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #f8f9fa;
+}
