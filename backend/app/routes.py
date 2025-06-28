@@ -5,8 +5,8 @@ from app.database import *
 router = APIRouter()
 
 @router.get("/stats")
-async def get_stats():
-  return await get_campaign_stats()
+def get_stats():
+  return get_campaign_stats()
 
 @router.post("/upload")
 async def upload_files(files: List[UploadFile] = File(...)):
@@ -14,5 +14,5 @@ async def upload_files(files: List[UploadFile] = File(...)):
   return {"status": "success", "details": result}
 
 @router.get("/campaigns")
-async def get_campaigns(name:str):
-  return await get_filtered_campaigns(name)
+def get_campaigns(name:str):
+  return get_filtered_campaigns(name)

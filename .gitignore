@@ -3,4 +3,3 @@ __pycache__
 .vscode
 venv/
 .env
-scripts/create_database.sql
